@@ -2,7 +2,7 @@ package com.example.gameapp.controller;
 
 import com.example.gameapp.model.Game;
 import com.example.gameapp.service.GameService;
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +16,7 @@ public class GameController {
 
     private final GameService gameService;
 
-    @Autowired
+    //@Autowired
     public GameController(GameService gameService) {
         this.gameService = gameService;
     }

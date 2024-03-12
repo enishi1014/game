@@ -2,7 +2,7 @@ package com.example.gameapp.service;
 
 import com.example.gameapp.model.Game;
 import com.example.gameapp.repository.GameRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class GameService {
 
     private final GameRepository gameRepository;
 
-    @Autowired
+    //@Autowired
     public GameService(GameRepository gameRepository) {
         this.gameRepository = gameRepository;
     }
