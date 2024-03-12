@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Suggestion App</title>
+    <link rel="stylesheet" href="style.css"> <!-- CSSファイルを適切にリンクしてください -->
+</head>
+<body>
+    <h1>Find a Game for Your Group</h1>
+    <form id="gameForm">
+        <input type="number" id="minPlayers" placeholder="Minimum Players" required>
+        <input type="number" id="maxPlayers" placeholder="Maximum Players" required>
+        <select id="platform">
+            <option value="PC">PC</option>
+            <option value="Console">Console</option>
+            <!-- 他のプラットフォームオプションを追加 -->
+        </select>
+        <button type="submit">Find Games</button>
+    </form>
+    <div id="gameSuggestions"></div>
+
+    <script src="app.js"></script> <!-- JavaScriptファイルを適切にリンクしてください -->
+</body>
+</html>
