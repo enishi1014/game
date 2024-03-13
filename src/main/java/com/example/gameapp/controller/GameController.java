@@ -21,7 +21,7 @@ public class GameController {
         this.gameService = gameService;
     }
 
-    @GetMapping("/games")
+    @GetMapping("/game")
     public List<Game> getGames(@RequestParam int minPlayers, @RequestParam int maxPlayers, @RequestParam String platform) {
         return gameService.findGamesByPlayersAndPlatform(minPlayers, maxPlayers, platform);
     }
