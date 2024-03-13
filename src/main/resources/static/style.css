@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#gameForm {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#gameForm input,
+#gameForm select,
+#gameForm button {
+    padding: 10px;
+}
+
+#gameForm button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+#gameForm button:hover {
+    background-color: #444;
+}
+
+#debugInfo,
+#gameCount,
+#gameSuggestions,
+#errorContainer {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
