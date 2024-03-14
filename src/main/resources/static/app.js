@@ -1,11 +1,11 @@
 document.getElementById('gameForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const minPlayers = document.getElementById('minPlayers').value;
-    const maxPlayers = document.getElementById('maxPlayers').value;
+    const players = document.getElementById('Players').value;
+
     const platform = document.getElementById('platform').value;
 
-    fetch(`/api/game?minPlayers=${minPlayers}&maxPlayers=${maxPlayers}&platform=${platform}`)
+    fetch(`/api/game?Players=${players}&platform=${platform}`)
     .then(response => response.json())
     .then(data => {
 

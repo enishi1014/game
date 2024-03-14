@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface GameRepository extends JpaRepository<Game, Long> {
     
-    @Query("SELECT g FROM Game g WHERE g.minPlayers <= :minPlayers AND g.maxPlayers >= :maxPlayers AND g.platform = :platform")
-    List<Game> findByPlayersAndPlatform(@Param("minPlayers") int minPlayers, @Param("maxPlayers") int maxPlayers, @Param("platform") String platform);
+    @Query("SELECT g FROM Game g WHERE g.minPlayers <= :Players AND g.maxPlayers >= :Players AND g.platform = :platform")
+    List<Game> findByPlayersAndPlatform(@Param("Players") int Players, @Param("platform") String platform);
 }

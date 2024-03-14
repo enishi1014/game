@@ -17,14 +17,12 @@ public class GameController {
     //private final GameService gameService;@Autowired
     private final GameRepository gameRepository;
 
-    //
-
     public GameController(GameRepository gameRepository) {
         this.gameRepository = gameRepository;
     }
 
     @GetMapping("/game")
-    public List<Game> getGames(@RequestParam int minPlayers, @RequestParam int maxPlayers, @RequestParam String platform) {
-        return gameRepository.findByPlayersAndPlatform(minPlayers, maxPlayers, platform);
+    public List<Game> getGames(@RequestParam int Players, @RequestParam String platform){
+        return gameRepository.findByPlayersAndPlatform(Players, platform);
     }
 }
