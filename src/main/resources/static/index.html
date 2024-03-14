@@ -8,20 +8,25 @@
 </head>
 <body>
     <h1>Find a Game for Your Group</h1>
-    <form id="gameForm">
+    <div class="form-container">
+       <form id="gameForm">
+        <div>
         <label for="players">Players: <span id="playersValue">1</span></label>
         <input type="range" id="Players" name="players" min="1" max="10" value="1" oninput="updatePlayersValue(this.value)">
-        
+        </div>
+
         <div>
             <input type="radio" id="platformPC" name="platform" value="PC" checked>
             <label for="platformPC">PC</label>
-        </div>
-        <div>
             <input type="radio" id="platformConsole" name="platform" value="Console">
             <label for="platformConsole">Console</label>
         </div>
+
+        <div>
         <button type="submit">Find Games</button>
-    </form>
+        </div>
+       </form>
+    </div>
 
     <div id="gameCount"></div>
     <div id="gameSuggestions"></div>

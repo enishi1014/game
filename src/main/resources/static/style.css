@@ -11,12 +11,43 @@ h1 {
     padding: 20px 0;
 }
 
+.form-container {
+    display: flex;
+    justify-content: center; /* 水平方向に中央寄せ */
+
+}
+
 #gameForm {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    flex-direction: column; /* 要素を縦に並べる */
+    align-items: center; /* 子要素を中央寄せ */
+    gap: 10px; /* 要素間の間隔 */
+    margin-bottom: 20px; /* 下部のマージン */
 }
+
+/* ラジオボタンのデフォルトのスタイルを隠す */
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    background-color: #f0f0f0; /* 背景色 */
+    padding: 10px 20px; /* パディング */
+    border: 2px solid #d1d1d1; /* 境界線 */
+    border-radius: 5px; /* 境界線の角を丸くする */
+    display: inline-block; /* ブロック要素として表示 */
+    cursor: pointer; /* マウスカーソルをポインタにする */
+    margin-right: 10px; /* 右のマージン */
+    transition: background-color 0.3s ease; /* 背景色の変更を滑らかにする */
+}
+
+/* チェックされたラジオボタンのラベルのスタイル */
+input[type="radio"]:checked + label {
+    background-color: #007bff; /* チェック時の背景色 */
+    color: white; /* テキスト色 */
+    border-color: #007bff; /* 境界線の色 */
+}
+
 
 #gameForm input,
 #gameForm select,
