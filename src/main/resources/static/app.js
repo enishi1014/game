@@ -18,10 +18,34 @@ document.getElementById('gameForm').addEventListener('submit', function(e) {
             gameCount.textContent = `Found ${data.length} game(s)`;
 
             data.forEach(game => {
-                const div = document.createElement('div');
-                div.textContent = game.name; 
-                suggestions.appendChild(div); 
+                
+                const card = document.createElement('div');
+                card.className = 'game-card';
+            
+                const name = document.createElement('div');
+                name.className = 'game-name';
+                name.textContent = game.name;
+            
+                const minPlayers = document.createElement('div');
+                minPlayers.className = 'game-info';
+                minPlayers.textContent = `Min players: ${game.minPlayers}`;
+            
+                const maxPlayers = document.createElement('div');
+                maxPlayers.className = 'game-info';
+                maxPlayers.textContent = `Max players: ${game.maxPlayers}`;
+            
+                const platform = document.createElement('div');
+                platform.className = 'game-info';
+                platform.textContent = `Platform: ${game.platform}`;
+            
+                card.appendChild(name);
+                card.appendChild(minPlayers);
+                card.appendChild(maxPlayers);
+                card.appendChild(platform);
+            
+                suggestions.appendChild(card);
             });
+
         } else {
             gameCount.textContent = 'No games found'; 
         }

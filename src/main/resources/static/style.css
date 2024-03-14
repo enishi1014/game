@@ -65,12 +65,43 @@ input[type="radio"]:checked + label {
     background-color: #444;
 }
 
-#debugInfo,
-#gameCount,
+#gameCount{
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
 #gameSuggestions,
 #errorContainer {
     margin: 20px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.game-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.game-info {
+    font-size: 14px;
+    margin-bottom: 5px;
 }
