@@ -9,7 +9,8 @@
 <body>
     <h1>Find a Game for Your Group</h1>
     <form id="gameForm">
-        <input type="number" id="Players" placeholder="Players" required>
+        <label for="players">Players: <span id="playersValue">1</span></label>
+        <input type="range" id="Players" name="players" min="1" max="10" value="1" oninput="updatePlayersValue(this.value)">
         
         <div>
             <input type="radio" id="platformPC" name="platform" value="PC" checked>

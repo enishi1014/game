@@ -3,6 +3,7 @@ document.getElementById('gameForm').addEventListener('submit', function(e) {
 
     const players = document.getElementById('Players').value;
 
+
     const platform = document.querySelector('input[name="platform"]:checked').value;
 
     fetch(`/api/game?Players=${players}&platform=${platform}`)
@@ -34,3 +35,7 @@ document.getElementById('gameForm').addEventListener('submit', function(e) {
 
 
 });
+
+function updatePlayersValue(value) {
+    document.getElementById('playersValue').textContent = value;
+}
