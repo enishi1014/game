@@ -11,10 +11,14 @@
     <form id="gameForm">
         <input type="number" id="Players" placeholder="Players" required>
         
-        <select id="platform">
-            <option value="PC">PC</option>
-            <option value="Console">Console</option>
-        </select>
+        <div>
+            <input type="radio" id="platformPC" name="platform" value="PC" checked>
+            <label for="platformPC">PC</label>
+        </div>
+        <div>
+            <input type="radio" id="platformConsole" name="platform" value="Console">
+            <label for="platformConsole">Console</label>
+        </div>
         <button type="submit">Find Games</button>
     </form>
 
